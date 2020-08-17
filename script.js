@@ -47,6 +47,26 @@ function displaySuggestion(allData) {
     }
 }
 
+// display lyrics from getLyrics  ---------------------------------------displayLyrics()--------------------------------------------------------
+
+const displayLyrics = (data, title, artistName, albumImage, artistImage) => {
+    document.querySelector('.single-result').style.display = "none";
+    document.getElementById("song-image").innerHTML = `<img src="${albumImage}" class="img-fluid"> <img src="${artistImage}" class="img-fluid">`
+    document.getElementById("get-title").innerText = title;
+    document.getElementById("get-artist").innerText = " - " + artistName;
+    document.getElementById("get-lyrics").innerText = "";
+    document.getElementById("search-result").innerText = "";
+    
+    if(data == undefined){
+        document.getElementById("get-lyrics").innerText = "Sorry! Lyrics is not found.";
+    }
+    else if (data.lyrics) {
+        document.getElementById("get-lyrics").innerText = data.lyrics;
+    } else {
+        document.getElementById("get-lyrics").innerText = "Sorry! Lyrics is not found.";
+    }
+}
+
 const getLyrics = (a, b) => {
     console.log(a, b);
 }

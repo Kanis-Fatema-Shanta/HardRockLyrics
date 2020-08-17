@@ -75,16 +75,26 @@
 
             <div class="single-lyrics text-center">
                 <button class="btn go-back">&lsaquo;</button>
-                <h2 class="text-success mb-4">Pentatonix - Na Na Na</h2>
-                <pre class="lyric text-white">
-                    Wont go whistling like the wind blows,
-                    Looking out my window,
-                    Just to see the shine
+                <h2 class="text-success mb-4">
+                    <!-- clicked & get song name here -->
+                    <div id="song-image" class="d-flex wrap align-items-center justify-content-center"></div>
+                    <span id="get-title"></span> <span id="get-artist"></span>
+                </h2>
+                
+
+                <pre class="lyric text-white" id="get-lyrics">
+                   <!-- lyrics here -->
                 </pre>
             </div>
 
         </main>
     </div>
+
+    <footer class="footer text-center ">
+        <p> Powered by <b>lyrics.ovh</b></p>
+        <p>&copy; Kanis Fatema Shanta | 2020</p>
+    </footer>
+
 
     <script src="script.js"></script>
     <!-- Optional JavaScript -->
